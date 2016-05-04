@@ -7,8 +7,11 @@ var express = require("express"),
     mongoose.set("debug", true);
 
 
-router.get('/user', function(req, res){
-	res.send("HEY WOW");
+//********************
+// GET REQUESTS
+//********************
+router.get('/', function(req, res){
+	res.send("Hello World!")
 });
 
 
