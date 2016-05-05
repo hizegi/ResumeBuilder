@@ -2,4 +2,14 @@
 	<h2> This is the main section </h2>
 
 	{{MainCtrl.greeting}}
+
+			<!-- show if not already logged in -->
+		<form id="logIn" ng-if="!MainCtrl.user" ng-class="(ctrl.displayForm)?'':'active'">
+			<input ng-model="ctrl.loginData.email" ng-class="(ctrl.loginError)?'errorBorder':''" type="text" placeholder="&#xE801;">
+			<input ng-model="ctrl.loginData.password" ng-class="(ctrl.loginError)?'errorBorder':''" type="password" placeholder="&#xE802;">
+			<button ng-click="ctrl.logIn()" class="formButton">&nbsp;&nbsp;&nbsp; LOG IN &nbsp;&nbsp;&nbsp;</button></br>
+			<p id="login-status"></p>
+			<p ng-click="ctrl.formShow()">not a user? sign up</p>
+		</form>
+
 </section>
