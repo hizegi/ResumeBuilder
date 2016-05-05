@@ -7,6 +7,10 @@ app.controller('MainController', ['$scope', '$rootScope', '$http', function($sco
 	this.greeting = "HELLO WORLD";
 	this.user = false;
 
+	this.addUser = function(){
+		console.log("sign up button fired");
+	}
+
 
 
 
